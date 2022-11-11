@@ -1,0 +1,7 @@
+# To add this to the project's Git config, execute the following:
+
+# git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Reformat with Prettier
+
+dfda35bc23b0b645f4d2159cca4cbebb4d537681
