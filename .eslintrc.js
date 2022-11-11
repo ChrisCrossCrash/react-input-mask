@@ -8,7 +8,7 @@ module.exports = {
     ecmaVersion: 2018
   },
   extends: ["airbnb", "prettier"],
-  plugins: ["prettier", "react-hooks"],
+  plugins: ["react-hooks"],
   env: {
     browser: true
   },
@@ -28,6 +28,5 @@ module.exports = {
     "prefer-const": [ERROR, {
         "destructuring": "all"
     }],
-    "prettier/prettier": ERROR,
   }
 };
