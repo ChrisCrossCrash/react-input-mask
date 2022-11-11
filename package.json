@@ -2,9 +2,9 @@
   "name": "react-input-mask",
   "description": "Masked input component for React",
   "version": "3.0.0-alpha.2",
-  "homepage": "https://github.com/sanniassin/react-input-mask",
+  "homepage": "https://github.com/ChrisCrossCrash/react-input-mask",
   "license": "MIT",
-  "author": "Nikita Lobachev <sanniassin@gmail.com>",
+  "author": "Christopher Kumm <chrislkumm@protonmail.com>  - forked from https://github.com/sanniassin/react-input-mask (thanks to Nikita Lobachev - @sanniassin)",
   "keywords": [
     "react",
     "input",
@@ -82,7 +82,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanniassin/react-input-mask.git"
+    "url": "https://github.com/ChrisCrossCrash/react-input-mask.git"
   },
   "dependencies": {
     "invariant": "^2.2.4",
