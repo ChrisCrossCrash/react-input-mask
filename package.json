@@ -69,14 +69,6 @@
     "lib",
     "dist"
   ],
-  "lint-staged": {
-    "*.js": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "scripts": {
     "clean": "rimraf lib dist",
     "build": "cross-env BABEL_ENV=rollup rollup -c",
@@ -84,6 +76,7 @@
     "prepare": "npm run lint && npm test && npm run clean && npm run build",
     "lint": "eslint ./src ./tests ./*.js",
     "lint-fix": "eslint --fix ./src ./tests ./*.js",
+    "format": "prettier --write .",
     "test": "npm run build && npm run test:input && npm run test:server-render && npm run test:build",
     "test:input": "cross-env CHROME_BIN=/usr/bin/brave-browser NODE_ENV=test BABEL_ENV=test karma start",
     "test:server-render": "cross-env BABEL_ENV=test mocha --require @babel/register ./tests/server-render",

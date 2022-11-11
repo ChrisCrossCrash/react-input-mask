@@ -1,44 +1,44 @@
-module.exports = config => {
+module.exports = (config) => {
   config.set({
     // define browsers
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox"]
-      }
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
     },
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ["ChromeHeadlessNoSandbox"],
+    browsers: ['ChromeHeadlessNoSandbox'],
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: "./",
+    basePath: './',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ["mocha"],
+    frameworks: ['mocha'],
 
     // list of files / patterns to load in the browser
     files: [
-      "node_modules/@babel/polyfill/dist/polyfill.min.js",
-      "node_modules/console-polyfill/index.js",
-      "tests/input/*.js"
+      'node_modules/@babel/polyfill/dist/polyfill.min.js',
+      'node_modules/console-polyfill/index.js',
+      'tests/input/*.js',
     ],
 
     // list of files to exclude
-    exclude: ["karma.conf.js"],
+    exclude: ['karma.conf.js'],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "tests/input/*.js": ["webpack"]
+      'tests/input/*.js': ['webpack'],
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ["progress"],
+    reporters: ['progress'],
 
     // web server port
     port: 9876,
@@ -60,16 +60,16 @@ module.exports = config => {
     webpack: {
       devtool: false,
       performance: {
-        hints: false
+        hints: false,
       },
-      mode: "development",
+      mode: 'development',
       output: {
-        filename: "[name].js"
+        filename: '[name].js',
       },
       resolve: {
-        modules: ["node_modules", "."]
+        modules: ['node_modules', '.'],
       },
-      module: require("./webpack.config").module
-    }
-  });
-};
+      module: require('./webpack.config').module,
+    },
+  })
+}
