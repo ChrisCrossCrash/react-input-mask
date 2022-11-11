@@ -1,0 +1,30 @@
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: erroroff18
+extends:
+  - airbnb
+  - prettier
+plugins:
+  - react-hooks
+env:
+  browser: true
+rules:
+  react/jsx-filename-extension: off
+  react/jsx-props-no-spreading: off
+  react/require-default-props: off
+  react/no-find-dom-node: off
+  react/prop-types:
+    - error
+    - ignore:
+        - value
+        - defaultValue
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error
+  no-shadow: off
+  no-param-reassign: off
+  no-plusplus: off
+  global-require: off
+  consistent-return: off
+  prefer-const:
+    - error
+    - destructuring: all
